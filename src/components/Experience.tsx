@@ -2,7 +2,7 @@ export default function Experience() {
   const experiences = [
     {
       date: '06/2025 - Present',
-      role: 'Backend Developer',
+      role: 'Fullstack Developer',
       company: 'Bugbattlers Technology Pvt Ltd, Pune',
       description: 'Developed and maintained backend systems and RESTful APIs using Node.js, TypeScript and Java Spring Boot. Implemented JWT authorization and optimized databases.',
     },

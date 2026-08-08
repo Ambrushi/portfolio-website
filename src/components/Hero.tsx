@@ -4,7 +4,7 @@ import avatarImg from '../assets/avatar.png';
 
 export default function Hero() {
   const roles = [
-    'Backend Developer',
+    'Fullstack Developer',
     'Node.js & TypeScript Expert',
     'Java Spring Boot Developer',
     'API Design Specialist',
@@ -53,7 +53,7 @@ export default function Hero() {
       <div className="hero-content">
         <div className="hero-left">
           <div className="badge">
-            <Briefcase size={14} /> Open to Backend Developer Roles
+            <Briefcase size={14} /> Open to Fullstack Developer Roles
           </div>
           <h1 className="hero-title">
             Hi, I'm Ambrushi Pawar <br />
@@ -63,7 +63,7 @@ export default function Hero() {
             I'm a <span style={{ color: 'var(--color-secondary)', borderRight: '2px solid var(--text-primary)', paddingRight: '4px' }}>{displayText}</span>
           </div>
           <p className="hero-description">
-            Backend Developer specializing in Node.js, TypeScript, and Java Spring Boot. Passionate about building robust RESTful APIs, managing multi-user ecosystems, and optimizing database performance.
+            Fullstack Developer specializing in Node.js, TypeScript, and Java Spring Boot. Passionate about building robust RESTful APIs, managing multi-user ecosystems, and optimizing database performance.
           </p>
           <div className="hero-actions">
             <button onClick={() => handleScrollTo('contact')} className="btn btn-primary">

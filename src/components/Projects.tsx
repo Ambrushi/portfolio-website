@@ -2,11 +2,31 @@ import { useState } from 'react';
 import { ExternalLink } from 'lucide-react';
 import project1 from '../assets/project1.png';
 import project2 from '../assets/project2.png';
+import filmynationImg from '../assets/filmynation.png';
+import gullakgoImg from '../assets/gullakgo.png';
 
 export default function Projects() {
   const [filter, setFilter] = useState('all');
 
   const projects = [
+    {
+      title: 'GullakGo: Goal-Based Saving & Expense Tracker',
+      category: 'fullstack',
+      description: 'A comprehensive goal-based financial web application featuring automated expense tracking, target saving management, and AI financial guidance.',
+      tags: ['React.js', 'Node.js', 'Financial AI', 'MongoDB'],
+      image: gullakgoImg,
+      liveLink: 'https://github.com/Ambrushi/Gullakgo---A-Goal-Based-saving-web-application-',
+      githubLink: 'https://github.com/Ambrushi/Gullakgo---A-Goal-Based-saving-web-application-',
+    },
+    {
+      title: 'Filmynation: AI Movie Recommendation Platform',
+      category: 'fullstack',
+      description: 'An AI-driven movie recommendation application that intelligently suggests personalized movies, trending titles, and tailored cinema picks.',
+      tags: ['React.js', 'AI Integration', 'Tailwind / CSS', 'Vercel'],
+      image: filmynationImg,
+      liveLink: 'https://filmynation.vercel.app/',
+      githubLink: 'https://github.com/Ambrushi/AI---Based-Movie-Recommendation-Website',
+    },
     {
       title: 'ConstroPlus: Construction Platform',
       category: 'fullstack',
