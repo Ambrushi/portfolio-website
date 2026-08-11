@@ -85,12 +85,14 @@ export default function Projects() {
         {filteredProjects.map((project, index) => (
           <div key={index} className="project-card glass">
             <div className="project-image">
-              <img src={project.image} alt={project.title} />
+              <a href={project.githubLink} target="_blank" rel="noreferrer" style={{ display: 'block', width: '100%', height: '100%' }}>
+                <img src={project.image} alt={project.title} />
+              </a>
               <div className="project-overlay">
-                <a href={project.githubLink} target="_blank" rel="noreferrer" className="btn btn-secondary" style={{ padding: '0.5rem' }}>
+                <a href={project.githubLink} target="_blank" rel="noreferrer" className="btn btn-secondary" style={{ padding: '0.5rem' }} title="View Source Code on GitHub">
                   <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                 </a>
-                <a href={project.liveLink} target="_blank" rel="noreferrer" className="btn btn-primary" style={{ padding: '0.5rem' }}>
+                <a href={project.liveLink} target="_blank" rel="noreferrer" className="btn btn-primary" style={{ padding: '0.5rem' }} title="View Live Demo / Project">
                   <ExternalLink size={18} />
                 </a>
               </div>
@@ -101,8 +103,24 @@ export default function Projects() {
                   <span key={i} className="project-tag">{tag}</span>
                 ))}
               </div>
-              <h3 className="project-title">{project.title}</h3>
+              <h3 className="project-title">
+                <a href={project.githubLink} target="_blank" rel="noreferrer" className="project-title-link">
+                  {project.title}
+                </a>
+              </h3>
               <p className="project-description">{project.description}</p>
+              
+              <div className="project-links">
+                <a href={project.githubLink} target="_blank" rel="noreferrer" className="project-link-btn primary-link">
+                  <svg viewBox="0 0 24 24" width="15" height="15" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  GitHub Repository
+                </a>
+                {project.liveLink && project.liveLink !== project.githubLink && (
+                  <a href={project.liveLink} target="_blank" rel="noreferrer" className="project-link-btn secondary-link">
+                    Live Demo <ExternalLink size={13} />
+                  </a>
+                )}
+              </div>
             </div>
           </div>
         ))}
