@@ -15,7 +15,7 @@ export default function Projects() {
       description: 'A comprehensive goal-based financial web application featuring automated expense tracking, target saving management, and AI financial guidance.',
       tags: ['React.js', 'Node.js', 'Financial AI', 'MongoDB'],
       image: gullakgoImg,
-      liveLink: 'https://github.com/Ambrushi/Gullakgo---A-Goal-Based-saving-web-application-',
+      liveLink: 'https://gullakgo-a-goal-based-saving-web-ap.vercel.app/',
       githubLink: 'https://github.com/Ambrushi/Gullakgo---A-Goal-Based-saving-web-application-',
     },
     {
