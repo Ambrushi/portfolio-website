@@ -239,7 +239,36 @@ section {
   font-size: 1.8rem;
   font-weight: 500;
   color: var(--text-secondary);
-  height: 2.5rem;
+  min-height: 2.5rem;
+  height: auto;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+@media (max-width: 768px) {
+  .hero-wrapper {
+    padding-top: 6.5rem;
+    min-height: auto;
+  }
+  .hero-title {
+    font-size: 2.25rem;
+  }
+  .hero-subtitle {
+    font-size: 1.35rem;
+    min-height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.85rem;
+  }
+  .hero-subtitle {
+    font-size: 1.15rem;
+  }
+  .hero-description {
+    font-size: 0.95rem;
+  }
 }
 
 .hero-description {
